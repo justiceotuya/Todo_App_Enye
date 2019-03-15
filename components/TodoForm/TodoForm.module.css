@@ -1,0 +1,45 @@
+.Todo__Form {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	height: 10%;
+	/* background-color: blue; */
+	/* padding: 0.3rem; */
+	/* margin-top: 2rem; */
+}
+
+.Todo__Input {
+	width: 80%;
+	height: 100%;
+	border-color: transparent;
+	/* border: none; */
+	border-bottom-left-radius: 1.5rem;
+	padding: 0 0 0 5px;
+	font-size: 1.5rem;
+	color: var(--purple);
+}
+
+.Todo__Input::placeholder {
+	color: var(--color-lavender);
+	/* padding: 0 0 0 5px; */
+}
+input[type='text']:focus,
+input[type='text']:focus ~ button {
+	box-shadow: 0 0 0 2px var(--purple);
+}
+.Todo__Input:focus {
+	outline-color: transparent;
+}
+.Todo__Add {
+	width: 20%;
+	height: 100%;
+	background-color: var(--white);
+	border-bottom-right-radius: 1.5rem;
+	font-size: 1.5rem;
+	color: var(--purple);
+}
+
+.Todo__Add:hover {
+	color: var(--white);
+	background: var(--purple);
+}
