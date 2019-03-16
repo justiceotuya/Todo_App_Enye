@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import styles from './Todo.module.css';
 import TodoList from '../TodoList/TodoList';
 import TodoForm from '../TodoForm/TodoForm';
-
+import PropTypes from 'prop-types';
 class Todo extends Component {
 	constructor(props) {
 		super(props);
+
 		this.state = {
 			inputValue: '',
 			todoItems: []
 		};
+
 		this.handleInputChange = this.handleInputChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleDeleteItem = this.handleDeleteItem.bind(this);
+		this.handleDeleteItemWithEnterKey = this.handleDeleteItemWithEnterKey.bind(this);
 	}
 
 	//get the value from the todo form
@@ -26,7 +29,7 @@ class Todo extends Component {
 	handleSubmit = e => {
 		//prevent default form submit action
 		e.preventDefault();
-		//check if the input state value is not empty and only push to the array when it is not empty
+		//check if the something iw written down in the input box and only add the item to the list. so empty items cannot be added
 		if (this.state.inputValue !== '') {
 			this.setState({
 				todoItems: [...this.state.todoItems, this.state.inputValue],
@@ -46,13 +49,26 @@ class Todo extends Component {
 		});
 	};
 
+	//for accessibility, this function deletes item from the list with an enter key
+	handleDeleteItemWithEnterKey = (index, e) => {
+		if (e.key === 'Enter') {
+			// calls the delete function when enter key is pressed
+			this.handleDeleteItem(index);
+		}
+	};
+
 	render() {
 		const { main, Todo } = styles;
 		const { todoItems, inputValue, checked } = this.state;
 		return (
 			<main className={main}>
 				<section className={Todo}>
-					<TodoList todoItems={todoItems} checked={checked} deleteItem={this.handleDeleteItem} />
+					<TodoList
+						todoItems={todoItems}
+						checked={checked}
+						deleteItem={this.handleDeleteItem}
+						deleteItemWithEnterKey={this.handleDeleteItemWithEnterKey}
+					/>
 					<TodoForm changeInput={this.handleInputChange} addTodoItem={this.handleSubmit} inputValue={inputValue} />
 				</section>
 			</main>

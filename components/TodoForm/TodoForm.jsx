@@ -28,5 +28,7 @@ export default function TodoForm(props) {
 	);
 }
 TodoForm.propTypes = {
-	changeInput: PropTypes.func
+	changeInput: PropTypes.func,
+	addTodoItem: PropTypes.func,
+	inputValue: PropTypes.string
 };

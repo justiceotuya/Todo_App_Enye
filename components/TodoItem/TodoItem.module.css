@@ -1,0 +1,53 @@
+.Todo__Item:hover .trash {
+	color: var(--text-color);
+	visibility: visible;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.Todo__Item {
+	color: var(--text-color);
+	list-style: none;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Item {
+	width: 22rem;
+	overflow-wrap: break-word;
+	margin: 1rem 0;
+}
+
+/* .trash {
+	visibility: hidden;
+	opacity: 0;
+} */
+
+.trash:hover,
+.trash:focus {
+	color: red !important;
+}
+
+input[type='checkbox']:checked ~ .Item {
+	text-decoration-line: line-through;
+	color: var(--color-lavender);
+}
+
+.empty {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 2rem;
+	color: var(--purple);
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.addIcon {
+	margin: 2rem 0;
+	font-size: 4rem;
+}
