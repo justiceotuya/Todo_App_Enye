@@ -4,22 +4,6 @@ import TodoList from '../TodoList/TodoList';
 import TodoForm from '../TodoForm/TodoForm';
 import PropTypes from 'prop-types';
 class Todo extends Component {
-	// getInitialProps = async function() {
-	// 	const res = await fetch('/test');
-	// 	const data = await res.text();
-
-	// 	console.log('data', data);
-
-	// 	// return {
-	// 	// 	shows: data
-	// 	// };
-	// };
-	// getInitialProps = async function() {
-	// 	const res = await fetch('/test');
-	// 	const data = await res.text();
-	// 	console.log(data);
-	// 	// return items;
-	// };
 	constructor(props) {
 		super(props);
 

@@ -188,12 +188,58 @@ function (_Component) {
     _this.handleInputChange = _this.handleInputChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
     _this.handleSubmit = _this.handleSubmit.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
     _this.handleDeleteItem = _this.handleDeleteItem.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
-    _this.handleDeleteItemWithEnterKey = _this.handleDeleteItemWithEnterKey.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
-    return _this;
-  } //get the value from the todo form
+    _this.handleDeleteItemWithEnterKey = _this.handleDeleteItemWithEnterKey.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this)); // this.getInitialProps = this.getInitialProps.bind(this);
 
+    return _this;
+  }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Todo, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('http://localhost:5000/', {
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        }
+      }).then(function (res) {
+        return res.json();
+      }).then(function (data) {
+        _this2.setState({
+          todoItems: [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_this2.state.todoItems), Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(data.items))
+        });
+
+        console.log('data', data.items);
+      }); // fetch(`/`)
+      // 	.then(response => console.log(response.body))
+      // 	.then(state => console.log('state', state));
+      // this.getInitialProps();
+      // Call our fetch function below once the component mounts
+      // this.callBackendAPI()
+      // 	.then(res => {
+      // 		console.log(res);
+      // 		console.log('res1', res.status);
+      // 		console.log('res2', res.body);
+      // 	})
+      // 	.catch(err => console.log(err));
+    } // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
+    // callBackendAPI = async () => {
+    // 	const response = await fetch('/test');
+    // 	// console.log('response', response);
+    // 	const body = await response.json();
+    // 	if (response.status !== 200) {
+    // 		throw Error(body.message);
+    // 	}
+    // 	return body;
+    // };
+    // callBackendAPI = () => {
+    // 	fetch('/test').then(res => console.log(res.body));
+    // 	// .then(test => console.log('test', test));
+    // };
+    //get the value from the todo form
+
+  }, {
     key: "render",
     value: function render() {
       var main = _Todo_module_css__WEBPACK_IMPORTED_MODULE_9___default.a.main,
@@ -206,14 +252,14 @@ function (_Component) {
         className: main,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 111
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("section", {
         className: Todo,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 112
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_TodoList_TodoList__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -223,7 +269,7 @@ function (_Component) {
         deleteItemWithEnterKey: this.handleDeleteItemWithEnterKey,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 113
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_TodoForm_TodoForm__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -232,7 +278,7 @@ function (_Component) {
         inputValue: inputValue,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 119
         },
         __self: this
       })));
@@ -295,6 +341,7 @@ function TodoForm(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "Todo input",
     type: "text",
     className: Todo__Input,
     placeholder: "What do we have todo",
@@ -439,12 +486,6 @@ function TodoItem(props) {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
     },
     __self: this
   }));
