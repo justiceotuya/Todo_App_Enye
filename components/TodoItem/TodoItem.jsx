@@ -37,7 +37,6 @@ export default function TodoItem(props) {
 				aria-label={`delete ${item}`}
 				title={`delete ${item}`}
 			/>
-			<label />
 		</li>
 	);
 }

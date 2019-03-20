@@ -4,6 +4,22 @@ import TodoList from '../TodoList/TodoList';
 import TodoForm from '../TodoForm/TodoForm';
 import PropTypes from 'prop-types';
 class Todo extends Component {
+	// getInitialProps = async function() {
+	// 	const res = await fetch('/test');
+	// 	const data = await res.text();
+
+	// 	console.log('data', data);
+
+	// 	// return {
+	// 	// 	shows: data
+	// 	// };
+	// };
+	// getInitialProps = async function() {
+	// 	const res = await fetch('/test');
+	// 	const data = await res.text();
+	// 	console.log(data);
+	// 	// return items;
+	// };
 	constructor(props) {
 		super(props);
 
@@ -16,7 +32,54 @@ class Todo extends Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleDeleteItem = this.handleDeleteItem.bind(this);
 		this.handleDeleteItemWithEnterKey = this.handleDeleteItemWithEnterKey.bind(this);
+		// this.getInitialProps = this.getInitialProps.bind(this);
 	}
+
+	componentDidMount() {
+		fetch('http://localhost:5000/', {
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json'
+			}
+		})
+			.then(res => {
+				return res.json();
+			})
+			.then(data => {
+				this.setState({
+					todoItems: [...this.state.todoItems, ...data.items]
+				});
+				console.log('data', data.items);
+			});
+		// fetch(`/`)
+		// 	.then(response => console.log(response.body))
+		// 	.then(state => console.log('state', state));
+		// this.getInitialProps();
+		// Call our fetch function below once the component mounts
+		// this.callBackendAPI()
+		// 	.then(res => {
+		// 		console.log(res);
+		// 		console.log('res1', res.status);
+		// 		console.log('res2', res.body);
+		// 	})
+		// 	.catch(err => console.log(err));
+	}
+	// Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
+	// callBackendAPI = async () => {
+	// 	const response = await fetch('/test');
+	// 	// console.log('response', response);
+	// 	const body = await response.json();
+
+	// 	if (response.status !== 200) {
+	// 		throw Error(body.message);
+	// 	}
+	// 	return body;
+	// };
+
+	// callBackendAPI = () => {
+	// 	fetch('/test').then(res => console.log(res.body));
+	// 	// .then(test => console.log('test', test));
+	// };
 
 	//get the value from the todo form
 	handleInputChange = e => {

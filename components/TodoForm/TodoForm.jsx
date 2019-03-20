@@ -9,6 +9,7 @@ export default function TodoForm(props) {
 	return (
 		<form className={Todo__Form}>
 			<input
+				name="Todo input"
 				type="text"
 				className={Todo__Input}
 				placeholder="What do we have todo"
@@ -20,7 +21,6 @@ export default function TodoForm(props) {
 				autoCorrect="true"
 				tabIndex="1"
 			/>
-
 			<button type="submit" className={Todo__Add} onClick={addTodoItem}>
 				Add
 			</button>
