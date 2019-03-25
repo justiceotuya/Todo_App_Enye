@@ -12,10 +12,9 @@
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
-		"start": "next start",
 		"now-build": "next build",
-		"test": "node server/index.js --exec pino-colada",
-		"server": "run-p test dev"
+		"server": "node server/index.js",
+		"start": "run-p server dev"
 	},
 	"author": "",
 	"license": "ISC",

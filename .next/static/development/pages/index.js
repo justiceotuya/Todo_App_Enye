@@ -33,7 +33,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Enye\\Todo\\components\\Todo\\Todo.jsx";
+var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Scratchpad\\Todo_App_Enye\\components\\Todo\\Todo.jsx";
 
 
 
@@ -215,7 +215,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TodoForm_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_TodoForm_module_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Enye\\Todo\\components\\TodoForm\\TodoForm.jsx";
+var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Scratchpad\\Todo_App_Enye\\components\\TodoForm\\TodoForm.jsx";
 
 
 
@@ -288,7 +288,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TodoItem_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_TodoItem_module_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Enye\\Todo\\components\\TodoItem\\TodoItem.jsx";
+var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Scratchpad\\Todo_App_Enye\\components\\TodoItem\\TodoItem.jsx";
 
 
 
@@ -391,7 +391,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _TodoItem_TodoItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../TodoItem/TodoItem */ "./components/TodoItem/TodoItem.jsx");
-var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Enye\\Todo\\components\\TodoList\\TodoList.jsx";
+var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Scratchpad\\Todo_App_Enye\\components\\TodoList\\TodoList.jsx";
 
 
 
@@ -12376,10 +12376,10 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CJustice%20Otuya%5CDocuments%5CLearn%5CEnye%5CTodo%5Cpages%5Cindex.js!./":
-/*!************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CJustice%20Otuya%5CDocuments%5CLearn%5CEnye%5CTodo%5Cpages%5Cindex.js ***!
-  \************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CJustice%20Otuya%5CDocuments%5CLearn%5CScratchpad%5CTodo_App_Enye%5Cpages%5Cindex.js!./":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CJustice%20Otuya%5CDocuments%5CLearn%5CScratchpad%5CTodo_App_Enye%5Cpages%5Cindex.js ***!
+  \***************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13821,7 +13821,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Todo_Todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Todo/Todo */ "./components/Todo/Todo.jsx");
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.css */ "./pages/index.css");
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Enye\\Todo\\pages\\index.js";
+var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Scratchpad\\Todo_App_Enye\\pages\\index.js";
 
 
 
@@ -13841,13 +13841,13 @@ var Index = function Index() {
 /***/ }),
 
 /***/ 1:
-/*!****************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CJustice%20Otuya%5CDocuments%5CLearn%5CEnye%5CTodo%5Cpages%5Cindex.js ***!
-  \****************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CJustice%20Otuya%5CDocuments%5CLearn%5CScratchpad%5CTodo_App_Enye%5Cpages%5Cindex.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CJustice%20Otuya%5CDocuments%5CLearn%5CEnye%5CTodo%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CJustice%20Otuya%5CDocuments%5CLearn%5CEnye%5CTodo%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CJustice%20Otuya%5CDocuments%5CLearn%5CScratchpad%5CTodo_App_Enye%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CJustice%20Otuya%5CDocuments%5CLearn%5CScratchpad%5CTodo_App_Enye%5Cpages%5Cindex.js!./");
 
 
 /***/ }),

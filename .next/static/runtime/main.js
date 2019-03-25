@@ -7911,7 +7911,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      source_map_support_1.rewriteStacktrace(error, "C:\\Users\\Justice Otuya\\Documents\\Learn\\Enye\\Todo\\.next");
+      source_map_support_1.rewriteStacktrace(error, "C:\\Users\\Justice Otuya\\Documents\\Learn\\Scratchpad\\Todo_App_Enye\\.next");
       return error;
     }
   };
@@ -18837,7 +18837,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Justice Otuya\Documents\Learn\Enye\Todo\node_modules\next\dist\client\next-dev */"./node_modules/next/dist/client/next-dev.js");
+module.exports = __webpack_require__(/*! C:\Users\Justice Otuya\Documents\Learn\Scratchpad\Todo_App_Enye\node_modules\next\dist\client\next-dev */"./node_modules/next/dist/client/next-dev.js");
 
 
 /***/ }),
