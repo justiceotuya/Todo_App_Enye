@@ -4,14 +4,22 @@
 	"name": "Todo_Enye",
 	"builds": [
 		{
-			"src": "index.js",
-			"use": "@now/node-server"
-		}
-	],
-	"routes": [
+			"src": "package.json",
+			"use": "@now/next",
+			"config": {
+				"maxLambdaSize": "20mb"
+			}
+		},
 		{
-			"src": "/(.*)",
-			"dest": "index.js"
+			"src": "static/*",
+			"use": "@now/static"
+		},
+		{
+			"src": "server.js",
+			"use": "@now/node-server",
+			"config": {
+				"maxLambdaSize": "20mb"
+			}
 		}
 	]
 }
