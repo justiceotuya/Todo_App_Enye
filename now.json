@@ -8,5 +8,5 @@
 			"use": "@now/node-server"
 		}
 	],
-	"routes": [{ "src": "/(.*)", "dest": "server/index.js" }]
+
 }
