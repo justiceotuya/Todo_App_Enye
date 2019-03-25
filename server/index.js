@@ -11,9 +11,8 @@ app.use(pino);
 
 app.get('/', (req, res) => {
 	res.type('application/json');
-	const name = req.query.name || 'World';
 	res.setHeader('Content-Type', 'application/json');
-	return res.send(JSON.stringify({ items: ['eat', 'dance', 'sleep'] }));
+	return res.send(JSON.stringify({ items: ['eat', 'dance', 'sleep', 'read', 'go to the market'] }));
 });
 
 app.listen(5000, () => console.log('Express server is running on localhost:5000'));
