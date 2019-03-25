@@ -38,7 +38,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Scratchpad\\Todo_App_Enye\\components\\Todo\\Todo.jsx";
 
 
 
@@ -68,7 +67,7 @@ function (_Component) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return fetch('http://localhost:5000/');
+              return fetch('http://localhost:3000/todo-items');
 
             case 2:
               res = _context.sent;
@@ -152,38 +151,18 @@ function (_Component) {
           inputValue = _this$state.inputValue,
           checked = _this$state.checked;
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("main", {
-        className: main,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 78
-        },
-        __self: this
+        className: main
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("section", {
-        className: Todo,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 79
-        },
-        __self: this
+        className: Todo
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_TodoList_TodoList__WEBPACK_IMPORTED_MODULE_12__["default"], {
         todoItems: todoItems,
         checked: checked,
         deleteItem: this.handleDeleteItem,
-        deleteItemWithEnterKey: this.handleDeleteItemWithEnterKey,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 80
-        },
-        __self: this
+        deleteItemWithEnterKey: this.handleDeleteItemWithEnterKey
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_TodoForm_TodoForm__WEBPACK_IMPORTED_MODULE_13__["default"], {
         changeInput: this.handleInputChange,
         addTodoItem: this.handleSubmit,
-        inputValue: inputValue,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 86
-        },
-        __self: this
+        inputValue: inputValue
       })));
     }
   }]);

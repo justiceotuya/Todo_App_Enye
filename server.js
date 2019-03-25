@@ -1,18 +1,24 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const pino = require('express-pino-logger')();
-var cors = require('cors');
+const next = require('next');
 
-const app = express();
-app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(pino);
+const port = parseInt(process.env.PORT, 10) || 3000;
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
-app.get('/', (req, res) => {
-  res.type('application/json');
-  res.setHeader('Content-Type', 'application/json');
-  return res.send(JSON.stringify({ items: ['eat', 'dance', 'sleep', 'read', 'go to the market'] }));
+app.prepare().then(() => {
+	const server = express();
+
+	server.get('/todo-items', (req, res) => {
+		return res.send(JSON.stringify({ items: ['eat', 'dance', 'sleep', 'read', 'go to the market'] }));
+	});
+
+	server.get('*', (req, res) => {
+		return handle(req, res);
+	});
+
+	server.listen(port, err => {
+		if (err) throw err;
+		console.log(`> Ready on http://localhost:${port}`);
+	});
 });
-
-app.listen(5000, () => console.log('Express server is running on localhost:5000'));

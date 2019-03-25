@@ -24,7 +24,7 @@ class Todo extends Component {
 	}
 
 	getInitialProps = async function() {
-		const res = await fetch('http://localhost:5000/');
+		const res = await fetch('http://localhost:3000/todo-items');
 		const data = await res.json();
 
 		this.setState({
