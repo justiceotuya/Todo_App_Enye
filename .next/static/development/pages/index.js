@@ -15399,7 +15399,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*******************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CJustice%20Otuya%5CDocuments%5CLearn%5CScratchpad%5CTodo_App_Enye%5Cpages%5Cindex.js ***!
   \*******************************************************************************************************************************************************************/
@@ -15422,5 +15422,5 @@ module.exports = dll_e42e0f91c9ae4e3e094d;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]));;
+},[[2,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=index.js.map
