@@ -67,7 +67,7 @@ function (_Component) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return fetch('http://localhost:3000/todo-items');
+              return fetch('/todo-items');
 
             case 2:
               res = _context.sent;
