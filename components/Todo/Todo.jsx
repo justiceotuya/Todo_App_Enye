@@ -12,6 +12,7 @@ class Todo extends Component {
 			todoItems: []
 		};
 
+		//binding functions
 		this.handleInputChange = this.handleInputChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleDeleteItem = this.handleDeleteItem.bind(this);
@@ -20,13 +21,16 @@ class Todo extends Component {
 	}
 
 	componentDidMount() {
+		//when the device mounts, hoist the getInitialProps function and run it
 		this.getInitialProps();
 	}
 
 	getInitialProps = async function() {
+		//fetch data from the backend
 		const res = await fetch('http://localhost:3000/todo-items');
 		const data = await res.json();
 
+		// set the data as todo items
 		this.setState({
 			todoItems: [...data.items]
 		});
@@ -43,11 +47,11 @@ class Todo extends Component {
 	handleSubmit = e => {
 		//prevent default form submit action
 		e.preventDefault();
-		//check if the something iw written down in the input box and only add the item to the list. so empty items cannot be added
+		//check if the something is written down in the input box and only add the item to the list. so empty items cannot be added
 		if (this.state.inputValue !== '') {
 			this.setState({
 				todoItems: [...this.state.todoItems, this.state.inputValue],
-				// set the input value to epmty
+				// set the input value to empty
 				inputValue: ''
 			});
 		}
@@ -55,11 +59,15 @@ class Todo extends Component {
 
 	// handle deleting of an item
 	handleDeleteItem = (index, e) => {
+		//copy state items to a new array to avoid mutating state directly
+		let modifiedArray = [...this.state.todoItems];
+
 		// remove the item from the todo List
-		this.state.todoItems.splice(index, 1);
+		modifiedArray.splice(index, 1);
+
 		// set todo item to modified list
 		this.setState({
-			todoItems: [...this.state.todoItems]
+			todoItems: modifiedArray
 		});
 	};
 

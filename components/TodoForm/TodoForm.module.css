@@ -43,3 +43,12 @@ input[type='text']:focus ~ button {
 	color: var(--white);
 	background: var(--purple);
 }
+
+@media (max-width: 500px) {
+	.Todo__Input {
+		border-bottom-left-radius: 0;
+	}
+	.Todo__Add {
+		border-bottom-right-radius: 0;
+	}
+}

@@ -4,7 +4,7 @@ import { faTrashAlt, faPlus } from '@fortawesome/free-solid-svg-icons';
 import styles from './TodoItem.module.css';
 import PropTypes from 'prop-types';
 
-//epmty state for the todo list
+//empty state for the todo list
 export const TodoEmptyState = () => {
 	const { empty, addIcon } = styles;
 

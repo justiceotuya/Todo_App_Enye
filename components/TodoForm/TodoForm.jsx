@@ -15,11 +15,11 @@ export default function TodoForm(props) {
 				placeholder="What do we have todo"
 				onChange={changeInput}
 				onSubmit={addTodoItem}
-				autoFocus
+				autoFocus //focus the input on load
 				value={inputValue}
 				autoComplete="true"
 				autoCorrect="true"
-				tabIndex="1"
+				tabIndex="1" //handle accessibility
 			/>
 			<button type="submit" className={Todo__Add} onClick={addTodoItem}>
 				Add

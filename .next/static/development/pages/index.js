@@ -76,6 +76,7 @@ function (_Component) {
 
             case 5:
               data = _context.sent;
+              // set the data as todo items
               this.setState({
                 todoItems: Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(data.items)
               });
@@ -96,24 +97,26 @@ function (_Component) {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this), "handleSubmit", function (e) {
       //prevent default form submit action
-      e.preventDefault(); //check if the something iw written down in the input box and only add the item to the list. so empty items cannot be added
+      e.preventDefault(); //check if the something is written down in the input box and only add the item to the list. so empty items cannot be added
 
       if (_this.state.inputValue !== '') {
         _this.setState({
           todoItems: [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_this.state.todoItems), [_this.state.inputValue]),
-          // set the input value to epmty
+          // set the input value to empty
           inputValue: ''
         });
       }
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this), "handleDeleteItem", function (index, e) {
-      // remove the item from the todo List
-      _this.state.todoItems.splice(index, 1); // set todo item to modified list
+      //copy state items to a new array to avoid mutating state directly
+      var modifiedArray = Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_this.state.todoItems); // remove the item from the todo List
 
+
+      modifiedArray.splice(index, 1); // set todo item to modified list
 
       _this.setState({
-        todoItems: Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_this.state.todoItems)
+        todoItems: modifiedArray
       });
     });
 
@@ -127,7 +130,8 @@ function (_Component) {
     _this.state = {
       inputValue: '',
       todoItems: []
-    };
+    }; //binding functions
+
     _this.handleInputChange = _this.handleInputChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this));
     _this.handleSubmit = _this.handleSubmit.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this));
     _this.handleDeleteItem = _this.handleDeleteItem.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this));
@@ -139,6 +143,7 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(Todo, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      //when the device mounts, hoist the getInitialProps function and run it
       this.getInitialProps();
     }
   }, {
@@ -190,7 +195,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TodoForm_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_TodoForm_module_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Scratchpad\\Todo_App_Enye\\components\\TodoForm\\TodoForm.jsx";
 
 
 
@@ -202,12 +206,7 @@ function TodoForm(props) {
       addTodoItem = props.addTodoItem,
       inputValue = props.inputValue;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    className: Todo__Form,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
+    className: Todo__Form
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     name: "Todo input",
     type: "text",
@@ -215,25 +214,17 @@ function TodoForm(props) {
     placeholder: "What do we have todo",
     onChange: changeInput,
     onSubmit: addTodoItem,
-    autoFocus: true,
+    autoFocus: true //focus the input on load
+    ,
     value: inputValue,
     autoComplete: "true",
     autoCorrect: "true",
-    tabIndex: "1",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
+    tabIndex: "1" //handle accessibility
+
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: Todo__Add,
-    onClick: addTodoItem,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
+    onClick: addTodoItem
   }, "Add"));
 }
 TodoForm.propTypes = {
@@ -263,44 +254,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TodoItem_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_TodoItem_module_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "C:\\Users\\Justice Otuya\\Documents\\Learn\\Scratchpad\\Todo_App_Enye\\components\\TodoItem\\TodoItem.jsx";
 
 
 
 
- //epmty state for the todo list
+ //empty state for the todo list
 
 var TodoEmptyState = function TodoEmptyState() {
   var empty = _TodoItem_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.empty,
       addIcon = _TodoItem_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.addIcon;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: empty,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, " Please Add a task"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__["FontAwesomeIcon"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: empty
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " Please Add a task"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__["FontAwesomeIcon"], {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faPlus"],
     fixedWidth: true,
-    className: addIcon,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
+    className: addIcon
   })));
 };
 function TodoItem(props) {
@@ -311,20 +279,10 @@ function TodoItem(props) {
       Item = _TodoItem_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.Item,
       trash = _TodoItem_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.trash;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: Todo__Item,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
+    className: Todo__Item
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: Item,
-    tabIndex: "0",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
+    tabIndex: "0"
   }, item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__["FontAwesomeIcon"], {
     tabIndex: "0",
     role: "button",
@@ -333,12 +291,7 @@ function TodoItem(props) {
     className: trash,
     onClick: deleteItem,
     "aria-label": "delete ".concat(item),
-    title: "delete ".concat(item),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
+    title: "delete ".concat(item)
   }));
 }
 TodoItem.propTypes = {
