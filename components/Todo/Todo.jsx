@@ -9,7 +9,7 @@ class Todo extends Component {
 
 		this.state = {
 			inputValue: '',
-			todoItems: []
+			todoItems: this.props.items
 		};
 
 		//binding functions
@@ -17,24 +17,7 @@ class Todo extends Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleDeleteItem = this.handleDeleteItem.bind(this);
 		this.handleDeleteItemWithEnterKey = this.handleDeleteItemWithEnterKey.bind(this);
-		this.getInitialProps = this.getInitialProps.bind(this);
 	}
-
-	componentDidMount() {
-		//when the device mounts, hoist the getInitialProps function and run it
-		this.getInitialProps();
-	}
-
-	getInitialProps = async function() {
-		//fetch data from the backend
-		const res = await fetch('/todo-items');
-		const data = await res.json();
-
-		// set the data as todo items
-		this.setState({
-			todoItems: [...data.items]
-		});
-	};
 
 	//get the value from the todo form
 	handleInputChange = e => {
